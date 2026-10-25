@@ -1,0 +1,535 @@
+:root{
+--rojoprincipal: #D71920;
+--grisfondo: #F3F4F6;
+--grisletra: #6B7280;
+--blancoprincipal: white;
+--negroletras: black;
+
+/* Medidas del layout (se redefinen en tablet) */
+--ancho-lateral: clamp(200px, 18.5vw, 320px);
+--separacion: 3.5vw;
+}
+
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
+img{
+  max-width: 100%;
+}
+
+
+/* =====================================================
+   LAYOUT GENERAL  (App.jsx -> <div className="app">)
+   Escritorio: lateral a la izquierda, contenido a la derecha
+   ===================================================== */
+.app{
+  display: grid;
+  grid-template-columns:
+    var(--ancho-lateral)
+    minmax(0, 1fr)
+    minmax(0, 30vw)
+    minmax(0, 6.5vw);
+  grid-template-rows: auto auto 1fr auto;
+  column-gap: var(--separacion);
+  align-items: start;
+}
+
+header{ grid-column: 1 / -1; grid-row: 1; }
+aside{  grid-column: 1 / -1; grid-row: 2 / 4; align-self: stretch; }
+.principal{ grid-column: 2;     grid-row: 2; }
+.valores{   grid-column: 3;     grid-row: 2; align-self: end; }
+.botones{   grid-column: 2 / 4; grid-row: 3; }
+footer{ grid-column: 1 / -1; grid-row: 4; }
+
+
+/* =====================================================
+   HEADER
+   ===================================================== */
+header{
+  background-color: var(--rojoprincipal);
+  display: grid;
+  grid-template-columns: 50% 1fr;
+  grid-template-areas:
+    "marca usuario"
+    "marca menu";
+  align-items: start;
+  box-shadow: 0 1px 0.3lvw var(--grisletra);
+  margin: 0;
+}
+
+.h22{
+  grid-area: marca;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-width: 0;
+  background-color: var(--blancoprincipal);
+  box-shadow: 0 1px 0.3lvw var(--rojoprincipal);
+}
+
+.logo{
+  width: 100px;
+  height: auto;
+}
+
+h1{
+  color: var(--rojoprincipal);
+  text-shadow: 5px 5px 8px var(--negroletras);
+  margin-left: -1%;
+  margin-top: 0;
+  font-size: 150%;
+}
+
+header b,
+.nombre{
+  color: var(--negroletras);
+}
+
+.nombre{
+  text-shadow: none;
+}
+
+/* Usuario (antes position:absolute; ahora dentro de la cuadrícula) */
+.usuario{
+  grid-area: usuario;
+  justify-self: end;
+  margin: 0.5rem 0.75rem 0 0;
+}
+
+.usuario a{
+  text-decoration: none;
+}
+
+.usuario button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 0 0.4rem;
+  margin: 0;
+  font-style: oblique;
+  font-size: large;
+}
+
+.usuario img{
+  width: 1.75rem;
+  height: 1.75rem;
+  border-radius: 50%;
+}
+
+/* Menú superior */
+.cntmenu{
+  grid-area: menu;
+  align-self: end;
+  justify-self: end;
+  margin-right: 0.3%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.menu{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.menu li a{
+  width: 100px;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+  color: var(--blancoprincipal);
+}
+
+.active{
+  border-left: solid;
+  color: var(--blancoprincipal);
+}
+
+
+/* =====================================================
+   ASIDE (menú lateral)
+   ===================================================== */
+aside{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--grisfondo);
+  box-shadow: 0 1px 0.3lvw var(--grisletra);
+  margin: 0;
+}
+
+aside div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: var(--ancho-lateral);
+  min-height: 35vw;
+  border-radius: 3px;
+  box-shadow: 3px 10px 10px var(--negroletras);
+}
+
+aside label{
+  color: var(--rojoprincipal);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 190%;
+  text-align: center;
+  border-color: var(--grisfondo);
+  border-style: solid;
+  border-radius: 10px;
+  box-shadow: 3px 3px 10px var(--grisletra);
+}
+
+aside ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  width: 84.5%;
+  margin: 1em 0;
+  padding: 0;
+}
+
+aside li{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+aside li a{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  text-decoration: none;
+}
+
+aside button{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  width: 83%;
+  margin-top: clamp(0.6rem, 2.2vw, 2rem);
+  font-family: sans-serif;
+  font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+  color: var(--negroletras);
+  background-color: var(--grisfondo);
+  border-color: var(--rojoprincipal);
+  border-radius: 18px;
+  box-shadow: 0 0.5px 5px var(--negroletras);
+  transition: all 0.2s ease;
+}
+
+aside button:hover{
+  color: var(--rojoprincipal);
+  transform: scale(1.04);
+  box-shadow: 10px 10px 10px var(--grisletra);
+}
+
+.home{
+  margin-top: 0;
+  min-height: 3.5vw;
+  background-color: var(--rojoprincipal);
+  color: var(--grisfondo);
+  border-color: var(--grisletra);
+  transition: all 0.2s ease;
+}
+
+aside button.home:hover{
+  color: var(--grisfondo);
+}
+
+aside img{
+  width: 20%;
+  height: auto;
+}
+
+
+/* =====================================================
+   TARJETAS (Targetas y Targeta2)
+   ===================================================== */
+.contenido{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: -1vw;
+  color: var(--negroletras);
+  border-style: solid;
+  border-color: var(--rojoprincipal);
+  border-radius: 10px;
+}
+
+.targetas .subtitulos{
+  font-size: x-large;
+}
+
+.targetas .sistem{
+  font-size: xx-large;
+  color: var(--rojoprincipal);
+  margin-top: -35px;
+}
+
+.targetas .subtitulos2{
+  font-size: x-large;
+  margin-top: -35px;
+}
+
+.principal .contenido .serv{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 5vw;
+  margin-left: 1vw;
+  font-size: large;
+  color: var(--rojoprincipal);
+}
+
+.principal .contenido .servicio{
+  font-size: 12px;
+  margin-left: 1vw;
+  margin-top: -1vw;
+}
+
+.valores{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+  color: var(--negroletras);
+  border-style: solid;
+  border-color: var(--rojoprincipal);
+  border-radius: 10px;
+}
+
+.valores p{
+  font-size: 12px;
+  margin-left: 1vw;
+  margin-top: 0;
+}
+
+
+/* =====================================================
+   FOOTER
+   ===================================================== */
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5rem 1rem;
+  min-height: 5vw;
+  margin-top: 1vw;
+  padding: 0.5rem;
+  background-color: var(--rojoprincipal);
+}
+
+footer label{
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--blancoprincipal);
+}
+
+footer a{
+  text-decoration: none;
+  color: var(--blancoprincipal);
+}
+
+footer img{
+  width: clamp(24px, 2.2vw, 40px);
+  height: auto;
+}
+
+
+/* =====================================================
+   TABLET  (hasta 1024px)
+   Se mantiene el lateral a la izquierda; las tarjetas se apilan
+   ===================================================== */
+@media (max-width: 1024px){
+  :root{
+    --ancho-lateral: clamp(180px, 26vw, 260px);
+    --separacion: 2.5vw;
+  }
+
+  .app{
+    grid-template-columns: var(--ancho-lateral) minmax(0, 1fr) 3vw;
+    grid-template-rows: auto auto auto 1fr auto;
+  }
+
+  aside{     grid-row: 2 / 5; }
+  .principal{ grid-column: 2; grid-row: 2; }
+  .valores{   grid-column: 2; grid-row: 3; align-self: start; margin-top: 1rem; }
+  .botones{   grid-column: 2; grid-row: 4; }
+  footer{     grid-row: 5; }
+
+  header{
+    grid-template-columns: minmax(0, 55%) 1fr;
+  }
+
+  .principal .contenido .servicio{
+    font-size: 13px;
+  }
+
+  .valores p{
+    font-size: 13px;
+    margin: 0.4rem 1vw;
+  }
+}
+
+
+/* =====================================================
+   MÓVIL  (hasta 768px)
+   Todo en una sola columna: header, menú, tarjetas, iconos, footer
+   ===================================================== */
+@media (max-width: 768px){
+  .app{
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: none;
+    column-gap: 0;
+  }
+
+  header{   grid-column: 1; grid-row: 1; }
+  aside{    grid-column: 1; grid-row: 2; }
+  .principal{ grid-column: 1; grid-row: 3; padding: 0 1rem; }
+  .valores{   grid-column: 1; grid-row: 4; margin: 1rem 1rem 0; padding: 0.6rem; justify-content: flex-start; align-items: flex-start; }
+  .botones{   grid-column: 1; grid-row: 5; }
+  footer{     grid-column: 1; grid-row: 6; }
+
+  /* Header */
+  header{
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "marca marca"
+      "menu usuario";
+    align-items: center;
+  }
+
+  .h22{
+    padding: 0.5rem;
+  }
+
+  .logo{
+    width: 64px;
+  }
+
+  h1{
+    font-size: 110%;
+  }
+
+  .usuario{
+    margin: 0.4rem 0.6rem;
+  }
+
+  .cntmenu{
+    justify-self: start;
+    align-self: center;
+    margin: 0;
+  }
+
+  .menu{
+    margin: 0.25rem 0;
+    padding: 0 0.5rem;
+  }
+
+  .menu li a{
+    width: 80px;
+  }
+
+  /* Aside: panel a todo el ancho y botones en cuadrícula */
+  aside{
+    padding: 0.75rem;
+    justify-content: center;
+  }
+
+  aside div{
+    width: 100%;
+    min-height: 0;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+  }
+
+  aside ul{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 0.6rem;
+    width: 100%;
+    margin: 0.5rem 0;
+    padding: 0 0.75rem;
+  }
+
+  aside li{
+    width: 100%;
+  }
+
+  aside button{
+    width: 100%;
+    margin-top: 0;
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .home{
+    min-height: 0;
+  }
+
+  /* Tarjetas */
+  .contenido{
+    margin-top: 0;
+  }
+
+  .principal .contenido .serv{
+    min-height: 2.5rem;
+    margin-left: 0.75rem;
+  }
+
+  .principal .contenido .servicio{
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 0 0.75rem 0.75rem;
+  }
+
+  .valores p{
+    width: 100%;
+    font-size: 14px;
+    line-height: 1.4;
+    margin: 5px 0;
+  }
+
+  /* Footer */
+  footer{
+    flex-direction: column;
+    align-items: center;
+    min-height: 0;
+    margin-top: 1rem;
+    padding: 0.75rem;
+    text-align: center;
+  }
+}
+
+
+/* Móviles pequeños */
+@media (max-width: 480px){
+  .menu li a{
+    width: 72px;
+    font-size: 0.9rem;
+  }
+
+  .usuario button{
+    font-size: medium;
+  }
+}
