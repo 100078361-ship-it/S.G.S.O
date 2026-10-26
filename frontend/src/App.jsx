@@ -1,20 +1,26 @@
-import Header from "./Componentes/Header.jsx";
-import Aside from "./Componentes/Aside";
-import Footer from "./Componentes/Footer.jsx";
-import Targetas from "./Componentes/Targetas.jsx";
-import Targeta2 from "./Componentes/Targeta2.jsx";
-import Iconos from "./Componentes/Iconos.jsx";
-
+import { Routes, Route } from "react-router-dom";
+import Paginas from "./Componentes/Pages/Paginas.jsx";
+import Registro from "./Componentes/Pages/Registro.jsx";
+import Consulta from "./Componentes/Pages/Consulta";
+import Dashboard from "./Componentes/Pages/Dashboard.jsx";
+import Documentacion from "./Componentes/Pages/Documentacion.jsx";
+import Capacitaciones from "./Componentes/Pages/Capacitaciones.jsx";
+import Reportes from "./Componentes/Pages/Reportes.jsx";
+import Indicadores from "./Componentes/Pages/Indicadores.jsx";
+import Incidentes from "./Componentes/Pages/Incidentes.jsx";
 function App() {
-return (
-<div className="app">
-<Header />
-<Aside />
-<Footer/>
-<Targetas/>
-<Targeta2/>
-<Iconos/>
-</div>
+  return (
+    <Routes>
+      <Route path="/" element={<Paginas />} />
+      <Route path="/Registro" element={<Registro />} />
+      <Route path="/Consulta" element={<Consulta />} />
+      <Route path="/Dashboard" element={<Dashboard />} />
+      <Route path="/Documentacion" element={<Documentacion />} />
+      <Route path="/Capacitaciones" element={<Capacitaciones />} />
+      <Route path="/Reportes" element={<Reportes />} />
+      <Route path="/Indicadores" element={<Indicadores />} />
+      <Route path="/Incidentes" element={<Incidentes />} />
+    </Routes>
   );
 }
 

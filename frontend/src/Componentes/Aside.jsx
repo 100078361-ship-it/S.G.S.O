@@ -6,6 +6,7 @@ import buscar from "../assets/Consulta.jpg";
 import dashboard from "../assets/dahsboard.jpg";
 import atras from "../assets/atras.jpg";
 import "./Header.css";
+import { Link } from "react-router-dom";
 
 
 function Aside(){
@@ -19,10 +20,10 @@ return(
   <label>Menu de opciones</label>
     <ul>
 
-      <li><a href=""><button className="home"><img src={home}/>Inicio<img src={entrar}/></button></a></li>
-      <li><a href=""><button><img src={guardar}/>Registro<img src={entrar}/></button></a></li>
-      <li><a href=""><button><img src={buscar}/>Consulta<img src={entrar}/></button></a></li>
-      <li><a href=""><button><img src={dashboard}/>Dashboard<img src={entrar}/></button></a></li>
+      <li><Link to= "/"><button className="home"><img src={home}/>Inicio<img src={entrar}/></button></Link></li>
+      <li><Link to= "/Registro"><button><img src={guardar}/>Registro<img src={entrar}/></button></Link></li>
+      <li><Link to="/Consulta"><button><img src={buscar}/>Consulta<img src={entrar}/></button></Link></li>
+      <li><Link to="/Dashboard"><button><img src={dashboard}/>Dashboard<img src={entrar}/></button></Link></li>
       <li><a href=""><button><img src={atras}/>Salir<img src={salir}/></button></a></li>
 
 </ul>

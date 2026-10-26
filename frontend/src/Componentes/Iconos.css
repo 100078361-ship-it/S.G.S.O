@@ -15,7 +15,7 @@
   align-items: center;
   gap: 0.5px;
   width: min(100%, 60vw);
-  margin-top: 3vw;
+  margin-top: 10vw;
   margin-left: 3vw;
 }
 
@@ -24,7 +24,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  width: 18%;
+  width: 100%;
   font-size: clamp(0.72rem, 0.95vw, 0.85rem);
   background-color: var(--grisfondo);
   border-radius: 8px;
