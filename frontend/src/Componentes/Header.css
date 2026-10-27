@@ -162,12 +162,13 @@ aside{
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: flex-start;
+  width: auto;
   background-color: var(--grisfondo);
   box-shadow: 0 1px 0.3lvw var(--grisletra);
   margin: 0;
 }
 
-aside div{
+Aside div{
   display: flex;
   flex-wrap: wrap;
   justify-content: center;

@@ -13,7 +13,7 @@ function Iconos(){
         <div className="botones">
 
 
-            <Link to="/Documentacion"><button><img src={documentacion}/>Documentación</button></Link>
+            <Link to=""><button><img src={documentacion}/>Documentación</button></Link>
             <Link to="/Reportes"><button><a href=""/><img src={reportes}/>Reportes</button></Link>
             <Link to="/Indicadores"><button><a href=""/><img src={indicadores}/>Indicadores</button></Link>
             <Link to="/Reportes"><button><a href=""/><img src={incidentes}/>Incidentes</button></Link>
