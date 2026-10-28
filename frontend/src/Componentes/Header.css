@@ -272,35 +272,52 @@ aside img{
   border-radius: 10px;
 }
 
+
+.principal .targetas {
+/*background-color: var(--grisletra);*/
+position: absolute;
+}
+
+
 .targetas .subtitulos{
-  font-size: x-large;
+  font-size: xx-large;
+  position: relative;
+  font-style: bold;
+  color: var(--negroletras);
+  
 }
 
 .targetas .sistem{
   font-size: xx-large;
   color: var(--rojoprincipal);
-  margin-top: -35px;
+  position: relative;
+  bottom: 1em;
+  
 }
 
 .targetas .subtitulos2{
   font-size: x-large;
-  margin-top: -35px;
+  position: relative;
+  bottom: 2.8em;
+  color: var(--grisletra);
 }
 
 .principal .contenido .serv{
   display: flex;
-  justify-content: center;
+ /* justify-content: center;
   align-items: center;
   min-height: 5vw;
-  margin-left: 1vw;
+  margin-left: 1vw;*/
   font-size: large;
   color: var(--rojoprincipal);
+  position: absolute;
 }
 
 .principal .contenido .servicio{
   font-size: 12px;
-  margin-left: 1vw;
-  margin-top: -1vw;
+  /*margin-left: 1vw;
+  margin-top: -1vw;*/
+  position: absolute;
 }
 
 .valores{
@@ -392,10 +409,10 @@ footer img{
 
 
 /* =====================================================
-   MÓVIL  (hasta 768px)
+   MÓVIL  (hasta 600px)
    Todo en una sola columna: header, menú, tarjetas, iconos, footer
    ===================================================== */
-@media (max-width: 768px){
+@media (max-width: 600px){
   .app{
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: none;
@@ -520,11 +537,14 @@ footer img{
     padding: 0.75rem;
     text-align: center;
   }
+
+
+
 }
 
 
 /* Móviles pequeños */
-@media (max-width: 480px){
+@media (max-width: 768px){
   .menu li a{
     width: 72px;
     font-size: 0.9rem;
@@ -533,4 +553,156 @@ footer img{
   .usuario button{
     font-size: medium;
   }
+
+  .principal .targetas P{
+font-size: large;
+
+  }
+
+  .principal .targetas .subtitulos2{
+    bottom: 2.5rem;
+
+  }
+}
+
+@media (max-width: 600px){
+.h22 {
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+justify-content: start;
+align-items: center;
+}
+h1{
+font-size: 0.5rem;
+
+}
+
+
+h1 {
+color: var(--rojoprincipal);
+
+}
+.h22{
+width: 50%;
+display: flex;
+flex-wrap: wrap;
+justify-content: row;
+
+}
+.h22 img{
+  width: 20%;
+}
+
+
+.cntmenu{
+width: 50%;
+
+}
+
+.usuario{
+width: 100%;
+display: flex;
+justify-content: end;
+align-items: end;
+flex-direction: row;
+background-color: var(--grisletra);
+position: relative;
+}
+.usuario img{
+width:  20%;
+
+}
+
+.usuario a{
+position: absolute;
+bottom: 1rem;
+
+}
+.usuario button{
+  width: 100%;
+  height: auto;
+font-size: 0.8em;
+display: flex;
+flex-wrap: wrap;
+justify-content: row;
+align-items: center;
+
+}
+
+header{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: row;
+  
+}
+header .cntmenu{
+  display: flex;
+  justify-content: row;
+  align-items: center;
+width: 100%;
+
+}
+
+header .cntmenu ul{
+width: 100%;
+height: auto;
+display: flex;
+}
+
+aside{
+  width: 50%;
+  height: auto;
+  box-shadow: 0 0 0;
+}
+
+aside div{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+width: 100%;
+height: auto;
+box-shadow: 0 0 0;
+}
+aside div img{
+  width: 10%;
+}
+aside div button{
+width: 50%;
+font-size: 0.5em;
+margin-right: 4rem;
+margin-bottom: 0.1rem;
+}
+
+aside div label{
+font-size: 1em;
+}
+
+.principal{
+  position: relative;
+}
+
+.principal .targetas{
+  width: 100%;
+  position: absolute;
+  right:8rem;
+
+}
+.principal .targetas .subtitulos, .sistem, .subtitulos2{
+
+font-size: 0.5em;
+
+}
+
+.principal .targetas .subtitulos2{
+
+font-size: 0.5em;
+
+}
+
+
+
+
 }

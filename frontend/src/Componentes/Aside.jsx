@@ -17,7 +17,7 @@ return(
 
         
 <div>
-  <label>Menu de opciones</label>
+  <label>Menú</label>
     <ul>
 
       <li><Link to= "/"><button className="home"><img src={home}/>Inicio<img src={entrar}/></button></Link></li>

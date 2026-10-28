@@ -15,8 +15,9 @@
   align-items: center;
   gap: 0.5px;
   width: min(100%, 60vw);
-  margin-top: 10vw;
-  margin-left: 3vw;
+  margin-top: 27vw;
+  margin-left: 7vw;
+  
 }
 
 .botones button{
@@ -31,37 +32,45 @@
   box-shadow: 2px 5px 15px var(--grisletra);
 }
 
+
 .botones button img{
-  width: clamp(2rem, 4vw, 3.5rem);
+  width: 60%;
   height: auto;
 }
 
 .botones button:hover{
   border-style: solid;
   border-color: var(--rojoprincipal);
+  color: var(--rojoprincipal);
 }
 
 
 /* Tablet: 3 botones por fila, centrados */
 @media (max-width: 1024px){
   .botones{
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    margin-top: 1rem;
-    margin-left: 0;
-    margin-bottom: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    gap: 5rem;
+    width: 70%;
+    margin-top: 15rem;
+    margin-left: 6%;
+    margin-bottom: 0;
+    position: relative;
   }
 
   .botones button{
-    width: auto;
+    width: 18%;
     flex: 0 1 calc((100% - 2rem) / 3);
     padding: 0.6rem 0.4rem;
-    font-size: 0.9rem;
+    font-size: 0.5rem;
+    position: absolute;
   }
 
   .botones button img{
-    width: 3rem;
+    width: 1.8rem;
   }
 }
 
@@ -69,12 +78,26 @@
 /* Móvil: 2 botones por fila */
 @media (max-width: 768px){
   .botones{
-    width: auto;
-    margin: 1rem 1rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 78%;
+    margin: 14.5rem 1rem 0;
     gap: 0.75rem;
   }
 
   .botones button{
     flex: 0 1 calc((100% - 0.75rem) / 2);
+    font-size: 0.4em;
   }
+
+
 }
+
+ @media (min-width: 600px){
+    .botones{
+      background-color: var(--rojoprincipal);
+      margin-left: 10rem;
+    }
+
+  }

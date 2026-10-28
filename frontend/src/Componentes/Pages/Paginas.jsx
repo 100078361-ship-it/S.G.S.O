@@ -1,7 +1,12 @@
+import Targetas from "../Targetas";
+import Iconos from "../Iconos";
+
+
 function Principal() {
   return (
     <>
-      <p>hola</p>
+      <Targetas/>
+      <Iconos/>
     </>
   );
 }
