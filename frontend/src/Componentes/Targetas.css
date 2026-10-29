@@ -1,0 +1,139 @@
+:root{
+--rojoprincipal: #D71920;
+--grisfondo: #F3F4F6;
+--grisletra: #6B7280;
+--blancoprincipal: white;
+--negroletras: black;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.datos{
+display: flex;
+flex-wrap: wrap;
+justify-content:start;
+flex-direction: row;
+position: relative;
+margin-top: 1rem;
+gap: 4%;
+width: auto;
+}
+
+.servicio{
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+border-style: solid;
+border-color: var(--rojoprincipal);
+border-radius: 8px;
+width: 40%;
+height: auto;
+box-shadow: 2px 5px 5px var(--grisletra);
+background-color: var(--grisfondo);
+}
+
+.servicio p{
+font-size: 1rem;
+
+}
+
+.servicio .serv{
+    display: flex;
+    justify-content: center;
+    color: var(--rojoprincipal);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1em;
+}
+
+.valores{
+    display: flex;
+flex-wrap: wrap;
+justify-content: column;
+align-items: center;
+border-style: solid;
+border-color: var(--rojoprincipal);
+border-radius: 8px;
+width: 40%;
+height: auto;
+gap: 0.1em;
+box-shadow: 2px 5px 5px var(--grisletra);
+background-color: var(--grisfondo);
+
+}
+
+.valores .titulo{
+    margin-left: 1rem;
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    max-width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+.valores .titulo p{
+color: var(--rojoprincipal);
+font-size: 1em;
+}
+
+.principal p{
+    display: flex;
+    flex-wrap: wrap;
+margin-bottom: 0.5rem;
+width: 25%;
+}
+
+.principal .targetas .subtitulos{
+font-size: 1.3rem;
+}
+.principal .targetas .sistem{
+font-size: 1.9rem;
+color: var(--rojoprincipal);
+width: 100%;
+height: auto;
+margin-top: 0;
+text-shadow: 3px 3px 5px var(--grisletra);
+}
+
+@media(max-width: 1024px){
+.principal .targetas .subtitulos{
+width: 100%;
+}
+
+
+
+.datos .servicio{
+    width: 50%;
+}
+.datos .valores{
+gap: 5px;
+    width: 40%;
+}
+
+}
+
+@media(max-width: 957px){
+
+    .valores{
+        
+        height: 35vh;
+    }
+
+
+}
+
+
+@media(min-width: 600px){
+
+    .valores{
+        
+        height: 45vh;
+    }
+    .servicio .titulo{
+background-color: var(--grisletra);
+margin-bottom: 4rem;
+
+    }
+
+
+}
+

@@ -164,8 +164,8 @@ aside{
   align-items: flex-start;
   width: auto;
   background-color: var(--grisfondo);
-  box-shadow: 0 1px 0.3lvw var(--grisletra);
   margin: 0;
+  background-color: var(--separacion);
 }
 
 Aside div{
@@ -174,7 +174,7 @@ Aside div{
   justify-content: center;
   align-items: center;
   width: var(--ancho-lateral);
-  min-height: 35vw;
+  min-height: 38vw;
   border-radius: 3px;
   box-shadow: 3px 10px 10px var(--negroletras);
 }
@@ -256,88 +256,6 @@ aside img{
 }
 
 
-/* =====================================================
-   TARJETAS (Targetas y Targeta2)
-   ===================================================== */
-.contenido{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  margin-top: -1vw;
-  color: var(--negroletras);
-  border-style: solid;
-  border-color: var(--rojoprincipal);
-  border-radius: 10px;
-}
-
-
-.principal .targetas {
-/*background-color: var(--grisletra);*/
-position: absolute;
-}
-
-
-.targetas .subtitulos{
-  font-size: xx-large;
-  position: relative;
-  font-style: bold;
-  color: var(--negroletras);
-  
-}
-
-.targetas .sistem{
-  font-size: xx-large;
-  color: var(--rojoprincipal);
-  position: relative;
-  bottom: 1em;
-  
-}
-
-.targetas .subtitulos2{
-  font-size: x-large;
-  position: relative;
-  bottom: 2.8em;
-  color: var(--grisletra);
-}
-
-.principal .contenido .serv{
-  display: flex;
- /* justify-content: center;
-  align-items: center;
-  min-height: 5vw;
-  margin-left: 1vw;*/
-  font-size: large;
-  color: var(--rojoprincipal);
-  position: absolute;
-}
-
-.principal .contenido .servicio{
-  font-size: 12px;
-  /*margin-left: 1vw;
-  margin-top: -1vw;*/
-  position: absolute;
-}
-
-.valores{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  margin: 0;
-  color: var(--negroletras);
-  border-style: solid;
-  border-color: var(--rojoprincipal);
-  border-radius: 10px;
-}
-
-.valores p{
-  font-size: 12px;
-  margin-left: 1vw;
-  margin-top: 0;
-}
-
 
 /* =====================================================
    FOOTER
@@ -385,13 +303,15 @@ footer img{
   .app{
     grid-template-columns: var(--ancho-lateral) minmax(0, 1fr) 3vw;
     grid-template-rows: auto auto auto 1fr auto;
+    height: auto;
   }
 
-  aside{     grid-row: 2 / 5; }
+  aside{     grid-row: 2 / 5; height: 48vh;}
   .principal{ grid-column: 2; grid-row: 2; }
-  .valores{   grid-column: 2; grid-row: 3; align-self: start; margin-top: 1rem; }
-  .botones{   grid-column: 2; grid-row: 4; }
-  footer{     grid-row: 5; }
+  .valores{   grid-column: 2; grid-row: 3; align-self: start; margin-top: 0;  font-size: 25em; }
+  .botones{   grid-column: 2; grid-row: 4; margin-top: 1rem; margin-left: 0.2rem;}
+  footer{     grid-row: 5; margin-top: 5rem;}
+  
 
   header{
     grid-template-columns: minmax(0, 55%) 1fr;

@@ -15,8 +15,8 @@
   align-items: center;
   gap: 0.5px;
   width: min(100%, 60vw);
-  margin-top: 27vw;
-  margin-left: 7vw;
+  margin-top: 1vw;
+  margin-left: 2vw;
   
 }
 
@@ -67,6 +67,7 @@
     padding: 0.6rem 0.4rem;
     font-size: 0.5rem;
     position: absolute;
+    margin-left: 2rem;
   }
 
   .botones button img{
@@ -82,7 +83,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     width: 78%;
-    margin: 14.5rem 1rem 0;
+    margin: 12rem 1rem 0;
     gap: 0.75rem;
   }
 
@@ -95,9 +96,10 @@
 }
 
  @media (min-width: 600px){
-    .botones{
-      background-color: var(--rojoprincipal);
-      margin-left: 10rem;
-    }
+    
+  .botones button{
+margin-left: 0.2rem;
+
+  }
 
   }

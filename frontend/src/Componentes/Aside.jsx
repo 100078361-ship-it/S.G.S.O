@@ -24,7 +24,7 @@ return(
       <li><Link to= "/Registro"><button><img src={guardar}/>Registro<img src={entrar}/></button></Link></li>
       <li><Link to="/Consulta"><button><img src={buscar}/>Consulta<img src={entrar}/></button></Link></li>
       <li><Link to="/Dashboard"><button><img src={dashboard}/>Dashboard<img src={entrar}/></button></Link></li>
-      <li><a href=""><button><img src={atras}/>Salir<img src={salir}/></button></a></li>
+      <li><button onClick={() => window.history.back()}><img src={atras}/>Atrás<img src={salir}/></button></li>
 
 </ul>
 </div>
