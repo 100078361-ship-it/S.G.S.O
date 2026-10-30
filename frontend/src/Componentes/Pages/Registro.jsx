@@ -1,3 +1,5 @@
+import Formulario from "../Formulario";
+
 
 function Registro(){
 
@@ -5,12 +7,13 @@ function Registro(){
    return(
 
  <>
-     <p>Registro</p>
-         
+     {/*<p>Registro</p>*/}
+      <Formulario/>
+
     </>
 
 
-   )
+   );
 
 
 }
