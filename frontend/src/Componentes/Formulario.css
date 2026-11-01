@@ -6,13 +6,30 @@
 --blancoprincipal: white;
 --negroletras: black;}
 
+/*
+.formulario{
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+background-color: var(--grisletra);
+}*/
+
 .registroaccidentes{
 display: flex;
 flex-wrap: wrap;
-justify-content: space-between;
 flex-direction: row;
-width: 58vh;
+width: 100vh;
 }
+
+
+
+.registroaccidentes img{
+width: 5em;
+height: auto;
+}
+
+
 
 .registroaccidentes p{
 font-size: 1.5em;
@@ -21,18 +38,91 @@ margin-top: 3rem;
 }
 
 
+
 .formulario form{
 display: flex;
 flex-wrap: wrap;
-flex-direction: column;
-width: 50vh;
-gap: 0.3rem;
+justify-content:space-between;
+flex-direction: row;
+width: 100vh;
+height: auto;
+gap: 0.5rem;
 /*background-color: #6B7280;*/
+}
+
+
+
+.formulario form .seccion2{
+display: flex;
+flex-direction: column;
+justify-content: end;
+align-items: start;
+/*background-color: var(--rojoprincipal);*/
+margin-bottom: 2vh;
+}
+
+.seccion2 input{
+   border-radius: 5px;
+   width: 24vw;
+   border-color: var(--rojoprincipal);
+   border-width: 1px;
+   margin-top: 0.5rem;
+}
+
+
+
+.formulario form .seccion1 {
+display: flex;
+flex-direction: column;
+justify-content: start;
+align-items: start;
+}
+
+.seccion1 input, .seccion1 select{
+   border-radius: 5px;
+   width: 21vw;
+   border-color: var(--rojoprincipal);
+   border-width: 1px;
+   margin-top: 0.5rem;
+}
+
+
+
+.seccion1 label{
+   margin-top: 0.5rem;
+}
+.seccion2 label{
+   margin-top: 0.5rem;
+}
+
+.enviarylimpiar{
+  /*  background-color: var(--rojoprincipal);*/
+    width: 35vw;
+    margin-top: 1rem;
+   display: flex;
+   flex-wrap: wrap;
+   justify-content: space-between;
+   margin-left: 4.5rem;
+}
+
+.enviarylimpiar button{
+width: 15vw;
+height: 6vh;
+border-radius: 8px;
+background-color: var(--rojoprincipal);
+color: var(--grisfondo);
+font-size: larger;
+box-shadow: 0 3px 12px var(--negroletras);
+}
+
+.enviarylimpiar button:hover{
+color: var(--rojoprincipal);
+background-color: var(--grisfondo);
 
 
 }
 
-/*.formulario form option{
 
-    color: black;
-}*/
+
+
+

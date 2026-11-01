@@ -8,6 +8,8 @@ import Indicadores from "./Componentes/Pages/Indicadores.jsx";
 import Incidentes from "./Componentes/Pages/Incidentes.jsx";
 import Capacitaciones from "./Componentes/Pages/Capacitaciones.jsx";
 import Documentacion from "./Componentes/Pages/Documentacion.jsx";
+import Registro2 from "./Componentes/Pages/Registro2.jsx";
+
 import Layout from "./Componentes/Layout.jsx";
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <Route element={<Layout />}>
         <Route path="/" element={<Paginas />} />
         <Route path="/Registro" element={<Registro />} />
+        <Route path="/Registro2" element={<Registro2/>} />
         <Route path="/Consulta" element={<Consulta />} />
         <Route path="/Dashboard" element={<Dashboard />} />
         <Route path="/Reportes" element={<Reportes />} />

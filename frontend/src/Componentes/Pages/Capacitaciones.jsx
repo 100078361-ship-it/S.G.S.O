@@ -1,5 +1,5 @@
 
-function Registro(){
+function Capacitaciones(){
 
 
    return(
@@ -15,4 +15,4 @@ function Registro(){
 
 }
 
-export default Registro;
+export default Capacitaciones;

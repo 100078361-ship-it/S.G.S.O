@@ -1,6 +1,6 @@
 
 
-function Registro(){
+function Reportes(){
 
 
    return(
@@ -16,4 +16,4 @@ function Registro(){
 
 }
 
-export default Registro;
+export default Reportes;

@@ -1,7 +1,7 @@
 
 
 
-function Registro(){
+function Dashboard(){
 
 
    return(
@@ -17,4 +17,4 @@ function Registro(){
 
 }
 
-export default Registro;
+export default Dashboard;

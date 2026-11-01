@@ -1,6 +1,8 @@
 
+import { Link } from "react-router-dom";
 import Guardar from "../assets/Guardar.jpg";
 import "./Formulario.css";
+
 
 
 
@@ -12,15 +14,15 @@ return(
 
 <div className="registroaccidentes">
 
-<img src={Guardar} alt="" />
+<img src={Guardar} title="Guardar" />
 
 <p>Registro de accidentes e incidentes</p>
-
 
 </div>
 
 <form>
 
+    <div className="seccion1">
 <label> Nombre y apellido</label>
 <input type="text" />
 
@@ -55,9 +57,13 @@ return(
 <option>Atrapamiento</option>
 <option>Exploción</option>
 </select>
+
+    </div>
+
+<div className="seccion2">
+
 <label>Causa inmediata</label>
 <input type="text" />
-
 <label>Causa básica</label>
 <input type="text" />
 
@@ -67,14 +73,17 @@ return(
 <label>Acto inseguro</label>
 <input type="text" />
 
-
-
-</form>
-
 </div>
 
 
+<div className="enviarylimpiar">
+<button type="reset">Limpiar</button>
+<Link to="/Registro2" ><button>Siguiente</button></Link>
+</div>
+</form>
 
+
+</div>
 
 
 

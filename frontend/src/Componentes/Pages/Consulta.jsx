@@ -1,11 +1,12 @@
 
-function Registro(){
+
+function Consulta(){
 
 
    return(
 
  <>
-      <p>Consulta</p>
+      <p>hola</p>
         
     </>
 
@@ -15,4 +16,4 @@ function Registro(){
 
 }
 
-export default Registro;
+export default Consulta;
