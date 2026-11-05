@@ -6,7 +6,6 @@ import usuario from  "../assets/Usuario.JPG";
 
 
 function Header(){
-
     return(
 <header>
         
@@ -35,7 +34,7 @@ function Header(){
         <a href="">Servicios</a>
       </li>
       <li className="active">
-        <a href="">Consulta</a>
+       
       </li>
       </ul>
           </div>   

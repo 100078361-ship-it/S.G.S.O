@@ -1,6 +1,6 @@
 import "./Formulario.css"
 
-
+import Iconos from "./Iconos.jsx";
 import { Link } from "react-router-dom";
 import Guardar from "../assets/Guardar.jpg";
 import "./Formulario.css";
@@ -75,7 +75,9 @@ return(
 
 </div>
 </form>
-
+<div className="iconos">
+   <Iconos/>
+</div>
 
 </div>
 
