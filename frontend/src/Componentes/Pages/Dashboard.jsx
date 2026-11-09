@@ -10,8 +10,9 @@ import diasperdidos from "../../assets/dias perdidos.jpg";
 import primerosauxilios from "../../assets/primeros auxilios.png";
 import indice from "../../assets/indice.png";
 import ISE from "../../assets/severidad.jpg";
-import Iconos from "../Iconos.jsx";
+import Graficos from "../Graficos.jsx";
 import "../Dashboard.css";
+
 
 
 function Dashboard(){
@@ -106,12 +107,14 @@ function Dashboard(){
 <p className="numero">35</p>
 </label>
 
+
+  
+   
 </div>
 
-<div className="iconos">
-   <Iconos/>
-</div>
-   
+  <div>
+<Graficos/>
+</div> 
 </>
    )
 

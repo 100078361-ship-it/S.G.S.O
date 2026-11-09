@@ -1,4 +1,4 @@
-
+import Consulta from "../../Componentes/Consulta.jsx"
 
 
 function Consultas() {
@@ -6,7 +6,9 @@ function Consultas() {
 
   return (
     <>
-      <p>Consultas</p>
+     <div>
+      <Consulta/>
+     </div>
     </>
   )
 }
