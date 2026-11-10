@@ -28,6 +28,14 @@ function Dashboard(){
         <p className="subtitulos"><br/>
         <p className="sistem">DASHBOARD</p>
          </p>
+ <div className="rangofecha">
+        <label>Desde</label>
+         <input type="date" className="desde" />
+         <label>Hasta</label>
+        <input type="date" className="hasta" />
+
+        <button>Filtrar</button>
+       </div>
 
     </div>
 

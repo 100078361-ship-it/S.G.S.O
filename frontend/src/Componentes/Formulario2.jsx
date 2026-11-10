@@ -23,12 +23,15 @@ return(
 </div>
 
 <form>
+<div className="registro1">
+
+
 
 <div className="seccion1">
 
     <label> Empresa</label>
 <select name="" id="">
-<option></option>
+<option>Seleciona una empresa</option>
 <option>CEDI Santo Domingo</option>
 <option>Pelco</option>
 <option>Laboratorio</option>
@@ -39,7 +42,7 @@ return(
 
 <label>Departamento</label>
 <select name="" id="">
-<option></option>
+<option>Seleciona un departamento</option>
 <option>Despacho</option>
 <option>Picking</option>
 <option>Recepcion</option>
@@ -60,18 +63,21 @@ return(
 <input type="text" />
 
 <label>Dias de dispacacidad</label>
-<input type="number" />
+<input type="text" inputmode="numeric" pattern="[0-9]*" />
 
 <label>Danios materiales</label>
 <input type="text" />
 
 <label>Costo estimado</label>
-<input type="text" />
+<input type="text" inputmode="numeric" pattern="[0-9]*" />
 </div>
 
+
+</div>
 <div className="enviarylimpiar">
 <button type="reset">Limpiar</button>
 <Link to="/Registro2" ><button>Guardar</button></Link>
+
 
 </div>
 </form>

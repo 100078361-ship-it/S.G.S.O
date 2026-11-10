@@ -5,8 +5,6 @@ import Iconos from "./Iconos.jsx";
 import "./Formulario.css";
 
 
-
-
 function Formulario(){
 
 return(
@@ -23,14 +21,17 @@ return(
 
 <form>
 
+<div className="registro1">
+
+
     <div className="seccion1">
-<label> Nombre y apellido</label>
-<input type="text" />
+<label>  Nombre y apellido</label>
+<input type="text" placeholder="Campo obligatorio" />
 
 
 <label>Tipo de evento</label>
 <select name="" id="">
-<option></option>
+<option>Seleciona un tipo de evento</option>
 <option>Accidente</option>
 <option>Incidente</option>
 </select>
@@ -38,7 +39,7 @@ return(
 
 <label>Gravedad</label>
 <select name="" id="">
-<option></option>
+<option>Seleciona la gravedad del evento</option>
 <option>Leve</option>
 <option>Moderado</option>
 <option>Grave</option>
@@ -50,7 +51,7 @@ return(
 
 
 <select name="" id="">
-    <option></option>
+    <option>Seleciona el tipo de accidente</option>
 <option>Caida</option>
 <option>Golpe</option>
 <option>Corte</option>
@@ -74,6 +75,7 @@ return(
 <label>Acto inseguro</label>
 <input type="text" />
 
+</div>
 </div>
 
 
