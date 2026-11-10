@@ -1,155 +1,183 @@
-
-
 :root{
---rojoprincipal: #D71920;
---grisfondo: #F3F4F6;
---grisletra: #6B7280;
---blancoprincipal: white;
---negroletras: black;
+  --rojoprincipal: #D71920;
+  --grisfondo: #F3F4F6;
+  --grisletra: #6B7280;
+  --blancoprincipal: white;
+  --negroletras: black;
 }
 
-.consulta{
-display: flex;
-flex-direction: row;
-justify-content: start;
-align-items: start;
-width: 80%;
-height: 5VH;
-border-style: solid;
-border-width: 1px;
-border-radius: 8px;
-border-color: var(--rojoprincipal);
-
-    margin-top: 1.2vh;
-}
-
-.consulta img{
-width: 3%;
-height: 60%;
-margin-top: 0.8%;
-margin-right: 0.3%;
-}
-
-.busqueda{
-width: 100%;
-height: 100%;
-    font-size: 12px;
-   /* font-style: oblique;
-    color: var(--rojoprincipal);
-    box-shadow: 2px 3px 10px var(--grisletra);
-  */
- border-style: solid;
-border-width: 1px;
-border-radius: 8px;
-border-color: var(--rojoprincipal);
-border-style: none;
-outline: none;
+/* ===== Cabecera: título + filtro de fechas ===== */
+.cabeceraconsulta{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem 1.5rem;
 }
 
 .h1cunsulta{
-    font-size: 2rem;
-    text-shadow: none;
-    margin-top: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 2rem;
+  text-shadow: none;
 }
-.cabeceraconsulta{
-    display: flex;
-    justify-content: space-between;
 
-}
 .cabeceraconsulta div{
-    width: 32%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-direction: row;
-margin-top: 1.5rem;
-margin-right: 5%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.75rem;
+  margin: 0.5rem 0;
 }
+
 .cabeceraconsulta label{
-    font-size: large;
-    font-style: bold;
-    
-}
-.desde, .hasta{
-    height: 2rem;
-    width: auto;
-border-style: solid;
-border-radius: 5px;
-
-color: var(--rojoprincipal);
-
+  font-size: 1.1rem;
+  font-weight: bold;
 }
 
-.busqueda{
-display: flex;
-justify-content: space-around;
+.desde,
+.hasta{
+  height: 2rem;
+  width: auto;
+  padding: 0 0.4rem;
+  box-sizing: border-box;
+  border: 1px solid var(--rojoprincipal);
+  border-radius: 5px;
+  color: var(--rojoprincipal);
 }
+
+/* ===== Buscador ===== */
+/* La clase "busqueda" la usan el contenedor (div) y el input: se separan por etiqueta */
+div.busqueda{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.75rem 1rem;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.consulta{
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex: 1 1 14rem;
+  min-width: 0;
+  min-height: 2.5rem;
+  box-sizing: border-box;
+  padding: 0 0.6rem;
+  border: 1px solid var(--rojoprincipal);
+  border-radius: 8px;
+}
+
+.consulta img{
+  width: 1.5rem;
+  height: auto;
+  flex-shrink: 0;
+}
+
+input.busqueda{
+  flex: 1;
+  min-width: 0;
+  height: 2.3rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  background: transparent;
+}
+
 .busqueda .butt{
-    background-color: var(--rojoprincipal);
-    width: 10rem;
-    height: auto;
-    font-size: 1.5rem;
-    border-radius: 8px;
-    margin-top: 0.8rem;
-    box-shadow: 2px 5px 10px var(--grisletra);
-    color: var(--grisfondo);
+  width: auto;
+  padding: 0.5rem 1.8rem;
+  font-size: 1.2rem;
+  color: var(--grisfondo);
+  background-color: var(--rojoprincipal);
+  border-radius: 8px;
+  box-shadow: 2px 5px 10px var(--grisletra);
+  cursor: pointer;
 }
 
 .busqueda .butt:hover{
-    background-color: var(--grisfondo);
-    color: var(--rojoprincipal);
-    border-style: solid;
-    border-width: 1px;
-    border-color: var(--rojoprincipal);
-    
+  color: var(--rojoprincipal);
+  background-color: var(--grisfondo);
+  border: 1px solid var(--rojoprincipal);
 }
 
+/* ===== Detalle (tabla) ===== */
 h2{
-
-    color: var(--rojoprincipal);
-    margin-top: 1.5rem;
-    margin-bottom: 0;
-
+  margin: 1.5rem 0 0.5rem;
+  color: var(--rojoprincipal);
 }
 
 .detalle{
-border-style: solid;
-border-width: 1px;
-border-radius: 5px;
-height: 50vh;
-margin-top: 0;
-border-color: var(--rojoprincipal);
-
+  height: auto;
+  margin-top: 0;
+  border: 1px solid var(--rojoprincipal);
+  border-radius: 5px;
 }
 
-.tabla-contenedor {
+/* Scroll horizontal en celulares y tablets */
+.tabla-contenedor{
   width: 100%;
-  overflow-x: auto; /* scroll horizontal en celulares y tablets */
+  overflow-x: auto;
 }
 
-.tabla-registros {
+.tabla-registros{
   width: 100%;
-  border-collapse: collapse;
   min-width: 800px;
+  border-collapse: collapse;
 }
 
 .tabla-registros th,
-.tabla-registros td {
-  border: 1px solid #ccc;
+.tabla-registros td{
   padding: 8px 12px;
   text-align: left;
+  border: 1px solid #ccc;
 }
 
-.tabla-registros th {
+.tabla-registros th{
   background: var(--rojoprincipal);
   color: white;
-  font-size: large;
+  font-size: 1rem;
 }
 
-.tabla-registros tbody tr:nth-child(even) {
+.tabla-registros tbody tr:nth-child(even){
   background: #f5f5f5;
 }
 
-.tabla-registros tbody tr:hover {
+.tabla-registros tbody tr:hover{
   background: #e3f2fd;
+}
+
+/* ===== Tablet ===== */
+@media (max-width: 1024px){
+  .tabla-registros th,
+  .tabla-registros td{
+    font-size: 0.9rem;
+    padding: 6px 8px;
+  }
+
+  .busqueda .butt{
+    font-size: 1.1rem;
+  }
+}
+
+/* ===== Móvil ===== */
+@media (max-width: 600px){
+  .h1cunsulta{
+    font-size: 1.6rem;
+  }
+
+  .cabeceraconsulta{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .busqueda .butt{
+    width: 100%;
+  }
+
+  .tabla-registros th,
+  .tabla-registros td{
+    font-size: 0.8rem;
+  }
 }

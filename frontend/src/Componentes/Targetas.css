@@ -1,138 +1,112 @@
 :root{
---rojoprincipal: #D71920;
---grisfondo: #F3F4F6;
---grisletra: #6B7280;
---blancoprincipal: white;
---negroletras: black;
+  --rojoprincipal: #D71920;
+  --grisfondo: #F3F4F6;
+  --grisletra: #6B7280;
+  --blancoprincipal: white;
+  --negroletras: black;
 }
 
-
+/* ===== Contenedor de las dos tarjetas ===== */
 .datos{
-display: flex;
-flex-wrap: wrap;
-justify-content:start;
-flex-direction: row;
-position: relative;
-margin-top: 1rem;
-gap: 4%;
-width: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 4%;
+  margin-top: 1rem;
+  width: 100%;
 }
 
-.servicio{
-display: flex;
-flex-wrap: wrap;
-justify-content: center;
-align-items: center;
-border-style: solid;
-border-color: var(--rojoprincipal);
-border-radius: 8px;
-width: 40%;
-height: auto;
-box-shadow: 2px 5px 5px var(--grisletra);
-background-color: var(--grisfondo);
+/* Las dos tarjetas comparten la misma base */
+.servicio,
+.valores{
+  flex: 1 1 18rem;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: 1rem;
+  height: auto;
+  border: 2px solid var(--rojoprincipal);
+  border-radius: 8px;
+  background-color: var(--grisfondo);
+  box-shadow: 2px 5px 5px var(--grisletra);
 }
 
+/* ===== Tarjeta de servicios ===== */
 .servicio p{
-font-size: 1rem;
-
+  font-size: 1rem;
+  margin: 0 0 0.5rem;
 }
 
 .servicio .serv{
-    display: flex;
-    justify-content: center;
-    color: var(--rojoprincipal);
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 1em;
+  display: block;
+  text-align: center;
+  color: var(--rojoprincipal);
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.1rem;
 }
 
+/* ===== Tarjeta de misión, visión y valores ===== */
 .valores{
-    display: flex;
-flex-wrap: wrap;
-justify-content: column;
-align-items: center;
-border-style: solid;
-border-color: var(--rojoprincipal);
-border-radius: 8px;
-width: 40%;
-height: auto;
-gap: 0.1em;
-box-shadow: 2px 5px 5px var(--grisletra);
-background-color: var(--grisfondo);
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.75rem;
 }
 
 .valores .titulo{
-    margin-left: 1rem;
-    margin-bottom: 0.5rem;
-    font-size: 1rem;
-    max-width: 90%;
-   height: auto;
+  max-width: 100%;
+  margin: 0;
+  font-size: 1rem;
+  height: auto;
 }
+
 .valores .titulo p{
-color: var(--rojoprincipal);
-font-size: 1em;
+  color: var(--rojoprincipal);
+  font-size: 1em;
+  margin: 0 0 0.25rem;
 }
 
-.principal p{
-    display: flex;
-    flex-wrap: wrap;
-margin-bottom: 0.5rem;
-width: 25%;
+/* ===== Textos de bienvenida (también los usa el Dashboard) ===== */
+.principal .targetas p{
+  display: block;
+  width: 100%;
+  margin: 0 0 0.5rem;
 }
 
 .principal .targetas .subtitulos{
-font-size: 1.3rem;
+  max-width: 26rem;
+  font-size: clamp(1rem, 2.5vw, 1.3rem);
 }
+
 .principal .targetas .sistem{
-font-size: 1.9rem;
-color: var(--rojoprincipal);
-width: 100%;
-height: auto;
-margin-top: 0;
-text-shadow: 3px 3px 5px var(--grisletra);
+  max-width: none;
+  margin-top: 0;
+  height: auto;
+  font-size: clamp(1.4rem, 4vw, 1.9rem);
+  color: var(--rojoprincipal);
+  text-shadow: 3px 3px 5px var(--grisletra);
 }
 
-@media(max-width: 1024px){
-.principal .targetas .subtitulos{
-width: 100%;
+/* ===== Tablet ===== */
+@media (max-width: 1024px){
+  .servicio,
+  .valores{
+    flex: 1 1 16rem;
+  }
 }
 
+/* ===== Móvil ===== */
+@media (max-width: 600px){
+  .datos{
+    gap: 1rem;
+  }
 
+  .servicio,
+  .valores{
+    flex: 1 1 100%;
+    padding: 0.75rem;
+  }
 
-.datos .servicio{
-    width: 50%;
+  .servicio p,
+  .valores .titulo{
+    font-size: 0.95rem;
+  }
 }
-.datos .valores{
-gap: 5px;
-    width: 40%;
-}
-
-}
-
-@media(max-width: 957px){
-
-    .valores{
-        
-        height: 35vh;
-    }
-
-
-}
-
-
-@media(min-width: 600px){
-
-    .valores{
-        
-        height: 65vh;
-    }
-    .servicio .titulo{
-background-color: var(--grisletra);
-margin-bottom: 4rem;
-
-    }
-
-
-}
-
-

@@ -1,65 +1,47 @@
 :root{
---rojoprincipal: #D71920;
---grisfondo: #F3F4F6;
---grisletra: #6B7280;
---blancoprincipal: white;
---negroletras: black;}
+  --rojoprincipal: #D71920;
+  --grisfondo: #F3F4F6;
+  --grisletra: #6B7280;
+  --blancoprincipal: white;
+  --negroletras: black;
+}
 
-
+/* ===== Contenedor general de las gráficas ===== */
 .graficos1{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    height: 45vh;
-   margin-top: 4.5vh; 
-   background-color: var(--grisfondo);
-   border-style: solid;
-   border-radius: 8px;
-   border-width: 1px;
-   border-color: var(--rojoprincipal);
-   box-shadow: 2px 3px 10px var(--grisletra);
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--grisfondo);
+  border: 1px solid var(--rojoprincipal);
+  border-radius: 8px;
+  box-shadow: 2px 3px 10px var(--grisletra);
 }
 
-.graficos1 div{
-    display: flex;
-    justify-content: space-around;
-    flex-direction: row;
-    align-items: center;
-    width: 100%;
-  flex: 1 1 350px;
-height: 350px
-  
+/* ===== Las 3 gráficas en cuadrícula (se acomodan solas) ===== */
+.graficos1 > .pastel{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 300px), 1fr));
+  gap: 1rem;
+  align-items: center;
 }
 
-@media(max-width: 1421px){
-
-.graficos1{
-  
-    width: 100%;
-    height:auto;
-   margin-top: 4.5vh; 
-  
-}
-
-.graficos1 div{
-    width: 100%;
-  flex: 1 1 100px;
-height: 400px
-  
-}
-
-    .pastel, .barra, .anillo{
-        width: 100%;
-        
-    }
-   .pastel{
+/* Solo los 3 contenedores directos: no afecta a los div internos de recharts */
+.graficos1 > .pastel > div{
   display: flex;
-flex-Wrap: wrap;
- gap: 20px
-    }
-
+  justify-content: center;
+  align-items: center;
+  min-width: 0;
+  height: 340px;
 }
 
+/* ===== Móvil ===== */
+@media (max-width: 600px){
+  .graficos1{
+    padding: 0.5rem;
+  }
 
+  .graficos1 > .pastel > div{
+    height: 300px;
+  }
+}
