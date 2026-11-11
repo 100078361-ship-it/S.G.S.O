@@ -15,7 +15,7 @@ function Header(){
           
           <h1>
             S.G.S.O 
-            <br/><b className="nombre"> Sistema de gestión de seguridad <br/>y salud ocupacional</b> 
+             
            </h1>
         </div>
 

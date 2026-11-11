@@ -16,8 +16,8 @@ function Iconos(){
 
             <Link to="/Documentacion"><button><img src={documentacion}/>Documentación</button></Link>
             <Link to="/Reportes"><button><a href=""/><img src={reportes}/>Reportes</button></Link>
-            <Link to="/Indicadores"><button><a href=""/><img src={indicadores}/>Indicadores</button></Link>
-            <Link to="/incidentes"><button><a href=""/><img src={incidentes}/>Incidentes</button></Link>
+            <Link to="/Indicadores"><button><a href=""/><img src={indicadores}/>Gestión de registro</button></Link>
+            <Link to="/incidentes"><button><a href=""/><img src={incidentes}/>Accidentes e incidentes</button></Link>
             <Link to="/Capacitaciones"><button><a href=""/><img src={capacitaciones}/>Capacitaciones</button></Link>
 
 

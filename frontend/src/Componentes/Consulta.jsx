@@ -1,5 +1,7 @@
 import "./Consulta.css"
 import Buscar from "../assets/Consulta.jpg"
+import Empresas from "./Empresas";
+
 const registros = [
   {
     id: 1,
@@ -11,28 +13,55 @@ const registros = [
     causaBasica: "Falta de mantenimiento",
     condicionInsegura: "Superficie resbaladiza",
     actoInseguro: "Caminar con prisa",
+    empresa: "CEDI Sto. Dgo",
+    departamento: "Picking",
+    cantinvolucrados: "2",
+    tipodelesion: "Rotura",
+    parteafectada: "Pie izquierdo",
+    diasdeincapacidad: "15",
+    daniosmateriales: "N/A",
+    costoestimados: "1202",
+    descipcion: "Resbalo por las escaleras"
   },
   {
     id: 2,
-    nombre: "María Gómez",
-    tipoEvento: "Incidente",
-    gravedad: "Leve",
-    tipoAccidente: "Golpe",
-    causaInmediata: "Objeto en el pasillo",
-    causaBasica: "Falta de orden y limpieza",
-    condicionInsegura: "Pasillo obstruido",
-    actoInseguro: "Dejar material en el paso",
+     nombre: "Juan Pérez",
+    tipoEvento: "Accidente",
+    gravedad: "Moderado",
+    tipoAccidente: "Caída",
+    causaInmediata: "Piso mojado",
+    causaBasica: "Falta de mantenimiento",
+    condicionInsegura: "Superficie resbaladiza",
+    actoInseguro: "Caminar con prisa",
+    empresa: "CEDI Sto. Dgo",
+    departamento: "Picking",
+    cantinvolucrados: "2",
+    tipodelesion: "Rotura",
+    parteafectada: "Pie izquierdo",
+    diasdeincapacidad: "15",
+    daniosmateriales: "N/A",
+    costoestimados: "1202",
+    descipcion: "Resbalo por las escaleras"
   },
   {
     id: 3,
-    nombre: "Carlos Ramírez",
+   nombre: "Juan Pérez",
     tipoEvento: "Accidente",
-    gravedad: "Grave",
-    tipoAccidente: "Corte",
-    causaInmediata: "Herramienta sin protección",
-    causaBasica: "Falta de capacitación",
-    condicionInsegura: "Equipo sin guarda",
-    actoInseguro: "No usar guantes",
+    gravedad: "Moderado",
+    tipoAccidente: "Caída",
+    causaInmediata: "Piso mojado",
+    causaBasica: "Falta de mantenimiento",
+    condicionInsegura: "Superficie resbaladiza",
+    actoInseguro: "Caminar con prisa",
+    empresa: "CEDI Sto. Dgo",
+    departamento: "Picking",
+    cantinvolucrados: "2",
+    tipodelesion: "Rotura",
+    parteafectada: "Pie izquierdo",
+    diasdeincapacidad: "15",
+    daniosmateriales: "N/A",
+    costoestimados: "1202",
+    descipcion: "Resbalo por las escaleras"
   },
 ];
 
@@ -46,13 +75,20 @@ function Consulta(){
 
     <h1 className="h1cunsulta">Consulta</h1>
 
+<div>
+         
+
+      </div>
+      
        <div>
+        
         <label>Desde</label>
          <input type="date" className="desde" />
          <label>Hasta</label>
         <input type="date" className="hasta" />
+        
        </div>
-
+<Empresas/>
 </div>
 
 
@@ -88,11 +124,19 @@ function Consulta(){
             <th>Nombre y apellido</th>
             <th>Tipo de evento</th>
             <th>Gravedad</th>
-            <th>Tipo de accidente</th>
-            <th>Causa inmediata</th>
-            <th>Causa básica</th>
-            <th>Condiciones inseguras</th>
-            <th>Acto inseguro</th>
+            <th>Clasificación del evento</th>
+            <th>Tipo de hallazgo identificado</th>
+            <th>Causa raíz</th>
+            <th>Acción correctiva</th>
+            <th>Descripción</th>
+            <th>Empresa</th>
+            <th>Departamento</th>
+            <th>Cant. Involucrados</th>
+            <th>Tipo de lesión</th>
+            <th>Parte afectada</th>
+            <th>Días incapacidad</th>
+            <th>Daños materiales</th>
+            <th>Costo estimado</th>
           </tr>
         </thead>
         <tbody>
@@ -105,7 +149,15 @@ function Consulta(){
               <td>{r.causaInmediata}</td>
               <td>{r.causaBasica}</td>
               <td>{r.condicionInsegura}</td>
-              <td>{r.actoInseguro}</td>
+              <td>{r.descipcion}</td>
+              <td>{r.empresa}</td>
+              <td>{r.departamento}</td>
+              <td>{r.cantinvolucrados}</td>
+              <td>{r.tipodelesion}</td>
+              <td>{r.parteafectada}</td>
+              <td>{r.diasdeincapacidad}</td>
+              <td>{r.daniosmateriales}</td>
+              <td>{r.costoestimados}</td>
             </tr>
           ))}
         </tbody>

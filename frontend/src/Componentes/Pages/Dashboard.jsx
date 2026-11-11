@@ -12,6 +12,7 @@ import indice from "../../assets/indice.png";
 import ISE from "../../assets/severidad.jpg";
 import Graficos from "../Graficos.jsx";
 import "../Dashboard.css";
+import Empresas from "../Empresas.jsx"
 
 
 
@@ -28,6 +29,12 @@ function Dashboard(){
         <p className="subtitulos"><br/>
         <p className="sistem">DASHBOARD</p>
          </p>
+
+         <div>
+
+         
+
+         </div>
  <div className="rangofecha">
         <label>Desde</label>
          <input type="date" className="desde" />
@@ -36,7 +43,7 @@ function Dashboard(){
 
         <button>Filtrar</button>
        </div>
-
+<Empresas/>
     </div>
 
 </div>
@@ -57,16 +64,7 @@ function Dashboard(){
 <p className="numero">20</p>
 </label>
 
-<label>
-<img src={reportes} alt="Accidentes" className="img"/>
-<p className="titulo">Reportes</p>
-<p className="numero">25</p>
-</label>
-<label>
-<img src={capacitaciones} alt="Accidentes" className="img"/>
-<p className="titulo">Capacitaciones</p>
-<p className="numero">19</p>
-</label>
+
 
 <label>
 <img src={pendientes} alt="Pendientes" className="img"/>

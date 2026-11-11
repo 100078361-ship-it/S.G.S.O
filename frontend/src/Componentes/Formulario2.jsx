@@ -50,8 +50,8 @@ return(
 </select>
 
 
-<label>Lesiones</label>
-<input type="text" />
+<label>Cantidad de personas involucradas</label>
+<input type="number" />
 
 <label>Tipo de lesion </label>
 <input type="text" />
@@ -65,7 +65,7 @@ return(
 <label>Dias de dispacacidad</label>
 <input type="text" inputmode="numeric" pattern="[0-9]*" />
 
-<label>Danios materiales</label>
+<label>Daños materiales</label>
 <input type="text" />
 
 <label>Costo estimado</label>
@@ -81,9 +81,7 @@ return(
 
 </div>
 </form>
-<div className="iconos">
-   <Iconos/>
-</div>
+
 
 </div>
 

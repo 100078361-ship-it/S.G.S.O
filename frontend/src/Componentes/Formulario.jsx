@@ -34,6 +34,8 @@ return(
 <option>Seleciona un tipo de evento</option>
 <option>Accidente</option>
 <option>Incidente</option>
+<option>Primeros auxilios</option>
+<option>Accidente de tránsito</option>
 </select>
 
 
@@ -47,33 +49,43 @@ return(
 </select>
 
 
-<label>Tipo de accidente</label>
+<label>Clasificación del evento</label>
 
 
 <select name="" id="">
     <option>Seleciona el tipo de accidente</option>
-<option>Caida</option>
-<option>Golpe</option>
-<option>Corte</option>
-<option>Quemadura</option>
-<option>Atrapamiento</option>
-<option>Exploción</option>
+<option>Golpes contra objetos</option>
+<option>Golpes por objetos</option>
+<option>Caídas al mismo nivel</option>
+<option>Caídas a diferente nivel</option>
+<option>Cortes y heridas</option>
+<option>Sobreesfuerzos</option>
+<option>Contacto con sustancias químicas</option>
+<option>Quemaduras</option>
+<option>Exposición a agentes físicos</option>
+<option>Atrapamientos</option>
+</select>
+
+<label>Tipo de hallazgo identificado</label>
+<select>
+    <option>Elije un tipo de hallazgo</option>
+<option>Acto inseguro</option>
+<option>Condición insegura</option>
 </select>
 
     </div>
 
 <div className="seccion2">
 
-<label>Causa inmediata</label>
+<label>Causa raíz</label>
 <input type="text" />
-<label>Causa básica</label>
-<input type="text" />
-
-<label>Condiciones inseguras</label>
+<label>Acción correctiva</label>
 <input type="text" />
 
-<label>Acto inseguro</label>
-<input type="text" />
+
+
+<label>Descripción</label>
+<textarea/>
 
 </div>
 </div>
@@ -85,9 +97,7 @@ return(
 </div>
 </form>
 
-<div className="iconos">
-   <Iconos/>
-</div>
+
 </div>
 
 

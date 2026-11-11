@@ -1,0 +1,23 @@
+
+
+:root{
+  --rojoprincipal: #D71920;
+  --grisfondo: #F3F4F6;
+  --grisletra: #6B7280;
+  --blancoprincipal: white;
+  --negroletras: black;
+}
+
+.empresas{
+display: flex;
+align-items: center;
+font-size: 0.2em;
+justify-content: start;
+}
+
+.empresas label{
+display: flex;
+align-items: center;
+color: var(--rojoprincipal);
+font-size: 10px;
+}
