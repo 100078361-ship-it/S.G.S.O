@@ -38,6 +38,7 @@ const coloresAnillo = ["#2E7D32", "#F9A825", "#C62828"];
 
 import "../Componentes/Graficos.css";
 
+
 function Graficos() {
 
     return (

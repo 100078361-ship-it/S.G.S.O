@@ -9,7 +9,9 @@ import Capacitaciones from "./Componentes/Pages/Capacitaciones.jsx";
 import Documentacion from "./Componentes/Pages/Documentacion.jsx";
 import Registro2 from "./Componentes/Pages/Registro2.jsx";
 import Consultas from "./Componentes/Pages/Consultas.jsx";
+import Loging from "./Componentes/Pages/Loging.jsx";
 import Layout from "./Componentes/Layout.jsx";
+
 
 function App() {
   return (
@@ -26,7 +28,10 @@ function App() {
         <Route path="/Documentacion" element={<Documentacion />} />
         <Route path="/Consultas" element={<Consultas />} />
         
+        
       </Route>
+
+      <Route path="/Loging" element={<Loging />} />
     </Routes>
   );
 }

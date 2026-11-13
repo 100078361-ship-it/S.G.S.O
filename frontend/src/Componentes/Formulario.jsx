@@ -85,7 +85,7 @@ return(
 
 
 <label>Descripción</label>
-<textarea/>
+<textarea className="descripcion"/>
 
 </div>
 </div>

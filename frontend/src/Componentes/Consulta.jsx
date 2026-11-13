@@ -1,6 +1,8 @@
 import "./Consulta.css"
 import Buscar from "../assets/Consulta.jpg"
 import Empresas from "./Empresas";
+import { Form } from "react-hook-form";
+import Anillos from "./Anillo.jsx"
 
 const registros = [
   {
@@ -162,10 +164,12 @@ function Consulta(){
           ))}
         </tbody>
       </table>
+      
     </div>
 
-
+           
         </div>
+         <div><Anillos/></div>
        </div>
         
     )

@@ -10,7 +10,7 @@ import diasperdidos from "../../assets/dias perdidos.jpg";
 import primerosauxilios from "../../assets/primeros auxilios.png";
 import indice from "../../assets/indice.png";
 import ISE from "../../assets/severidad.jpg";
-import Graficos from "../Graficos.jsx";
+import  Graficos from "../Graficos.jsx"; 
 import "../Dashboard.css";
 import Empresas from "../Empresas.jsx"
 
